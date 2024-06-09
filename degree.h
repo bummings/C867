@@ -1,0 +1,1 @@
+// This will have a enum of with name DegreeProgram with the values: SECURITY, NETWORK, SOFTWARE
