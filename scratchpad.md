@@ -36,9 +36,6 @@
 
 ## Main Function
 
-- Steps to demonstrate functionality
-
-Sure, I will provide a revised summary of the assignment prompt with detailed bullet points to ensure clarity and accuracy.
 
 ### Assignment Summary
 
@@ -161,10 +158,3 @@ Sure, I will provide a revised summary of the assignment prompt with detailed bu
 
    - Compile and run your code to ensure all functions work as expected.
    - Test each function individually and verify output.
-
-7. **Final Checks**
-   - Implement the destructor in `roster.cpp`.
-   - Review and clean up code.
-   - Ensure professionalism in your submission.
-
-Please proceed with any specific questions or parts of the project you need help with.
