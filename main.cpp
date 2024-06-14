@@ -60,7 +60,8 @@ int main()
   
   Student edd;
 
-  cout << "First name: " << edd.getFirstName();
+  // you will need to implement the getters and setters on the student object obv.
+cout << "First name: " << edd.getFirstName() << endl;  
 
 
 
