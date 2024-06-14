@@ -27,13 +27,19 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     this->degreeProgram = degreeProgram;
 }
 
-// getters
+// getters && setters
 string Student::getFirstName() const {
     return firstName;
+}
+void Student::setFirstName(const string& firstName) {
+    this->firstName = firstName;
 }
 
 string Student::getLastName() const {
     return lastName;
+}
+void Student::setLastName(const string& lastName) {
+    this->lastName = lastName;
 }
 
 // this method helps print out a string for the enum of DegreeType, as it will just return an indice for the value. 

@@ -63,7 +63,11 @@ int main()
   // you will need to implement the getters and setters on the student object obv.
 cout << "First name: " << edd.getFirstName() << endl;  
 
+cout << "Modifying name with setter now 🤯 " << endl;
 
+edd.setFirstName("Edward ");
+
+cout << "New name: " << edd.getFirstName() << endl;
 
   return 0;
 }
