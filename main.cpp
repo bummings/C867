@@ -69,5 +69,14 @@ edd.setFirstName("Edward ");
 
 cout << "New name: " << edd.getFirstName() << endl;
 
+cout << "Email: " << edd.getEmailAddress() << endl;
+
+cout << "Updating email address..." << endl;
+
+edd.setEmailAddress("eabummings@gmail.com");
+
+cout << "Updated email: " << edd.getEmailAddress() << endl; 
+
+
   return 0;
 }
