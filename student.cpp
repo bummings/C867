@@ -27,6 +27,7 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     this->degreeProgram = degreeProgram;
 }
 
+// this method helps print out a string for the enum of DegreeType, as it will just return an indice for the value. 
 void Student::print() {
     string degree_string;
     if (degreeProgram == DegreeProgram::SOFTWARE) {
