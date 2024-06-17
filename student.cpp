@@ -4,9 +4,9 @@
 
 Student::Student() {
     this->studentID = "A5";
-    this->firstName = "Edd";
+    this->firstName = "Edward";
     this->lastName = "Burke";
-    this->emailAddress = "hello@bummings.io";
+    this->emailAddress = "eabummings@gmail.com";
     this->age = 37;
     this->daysInCourse[0] = 10;
     this->daysInCourse[1] = 20;
@@ -50,7 +50,7 @@ string Student::getEmailAddress() const {
     return emailAddress;
 }
 void Student::setEmailAddress(const string& emailAddress) {
-    this->lastName = emailAddress;
+    this->emailAddress = emailAddress;
 }
 
 // degree program
