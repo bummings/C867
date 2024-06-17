@@ -18,6 +18,11 @@ int main()
   cout << "\n\n\n";
 
 
+for (int i; i < numStudents; i++) {
+  cout << "ANOTHER ONE";
+}
+
+
 
   cout << studentData[1];
 
