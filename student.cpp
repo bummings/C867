@@ -1,8 +1,9 @@
 #include "student.h"
 #include <iostream>
 
-
-Student::Student() {
+// default constructor
+Student::Student()
+{
     this->studentID = "A5";
     this->firstName = "Edward";
     this->lastName = "Burke";
@@ -14,14 +15,16 @@ Student::Student() {
     this->degreeProgram = DegreeProgram::SOFTWARE;
 }
 
-Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[3], DegreeProgram degreeProgram) {
+Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[3], DegreeProgram degreeProgram)
+{
     this->studentID = studentID;
     this->firstName = firstName;
     this->lastName = lastName;
     this->emailAddress = emailAddress;
     this->age = age;
     // loop over all days in course values
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++)
+    {
         this->daysInCourse[i] = daysInCourse[i];
     }
     this->degreeProgram = degreeProgram;
@@ -30,40 +33,78 @@ Student::Student(string studentID, string firstName, string lastName, string ema
 // getters && setters
 
 // first name
-string Student::getFirstName() const {
+string Student::getFirstName() const
+{
     return firstName;
 }
-void Student::setFirstName(const string& firstName) {
+void Student::setFirstName(const string &firstName)
+{
     this->firstName = firstName;
 }
 
 // last name
-string Student::getLastName() const {
+string Student::getLastName() const
+{
     return lastName;
 }
-void Student::setLastName(const string& lastName) {
+void Student::setLastName(const string &lastName)
+{
     this->lastName = lastName;
 }
 
 // email address
-string Student::getEmailAddress() const {
+string Student::getEmailAddress() const
+{
     return emailAddress;
 }
-void Student::setEmailAddress(const string& emailAddress) {
+void Student::setEmailAddress(const string &emailAddress)
+{
     this->emailAddress = emailAddress;
 }
 
-// degree program
+// age
+int Student::getAge() const
+{
+    return age;
+}
+void Student::setAge(const int &age)
+{
+    this->age = age;
+}
 
-// this method helps print out a string for the enum of DegreeType, as it will just return an indice for the value. 
-void Student::print() {
+// days in course
+const int *Student::getDaysInCourse() const
+{
+    return daysInCourse;
+}
+void Student::setDaysInCourse(int daysInCourse[])
+{
+    for (int i = 0; i < 3; ++i)
+    {
+        this->daysInCourse[i] = daysInCourse[i];
+    }
+}
+
+// degree program
+DegreeProgram Student::getDegreeProgram() const
+{
+    return degreeProgram;
+}
+
+// this method helps print out a string for the enum of DegreeType, as it will just return an indice for the value.
+void Student::print()
+{
     string degree_string;
-    if (degreeProgram == DegreeProgram::SOFTWARE) {
+    if (degreeProgram == DegreeProgram::SOFTWARE)
+    {
         degree_string = "Software";
     }
-    else if (degreeProgram == DegreeProgram::SECURITY) {
+    else if (degreeProgram == DegreeProgram::SECURITY)
+    {
         degree_string = "Security";
-    } else if (degreeProgram == DegreeProgram::NETWORK) {
+    }
+    else if (degreeProgram == DegreeProgram::NETWORK)
+    {
         degree_string = "Network";
     }
     cout << studentID << endl;
