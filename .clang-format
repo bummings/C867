@@ -11,4 +11,6 @@ BraceWrapping:
   SplitEmptyFunction: false
   SplitEmptyRecord: false
   SplitEmptyNamespace: false
+AllowShortFunctionsOnASingleLine: false
+IncludeBlocks: Preserve
 
