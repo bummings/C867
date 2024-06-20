@@ -5,9 +5,10 @@ using namespace std;
 
 Roster::Roster() {}
 
+// avoid memory leaks
 Roster::~Roster() {
     for (int i = 0; i <= lastIndex; i++) {
-        delete classRosterArray;
+        delete classRosterArray[i];
     }
 }
 
@@ -16,19 +17,20 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
     classRosterArray[++lastIndex] = new Student(studentID, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram);
 }
 
-void Roster::remove(string StudentID) {
+void Roster::remove(string studentID) {
     bool found = false;
     for (int i = 0; i <= lastIndex; ++i) {
-        if (classRosterArray[i]->getStudentID() == StudentID) {
+        if (classRosterArray[i]->getStudentID() == studentID) {
             delete classRosterArray[i];
             classRosterArray[i] = classRosterArray[lastIndex];
             classRosterArray[lastIndex] = nullptr;
+            lastIndex--;
             found = true;
             break;
         }
     }
     if (!found) {
-        cout << "Cannot find student with the ID: " << StudentID; 
+        cout << "Cannot find student with the ID: " << studentID; 
     }
 }
 

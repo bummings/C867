@@ -26,7 +26,7 @@ public:
 
     // student ID
     string getStudentID() const;
-    void setStudentID(const int &studentID);
+    void setStudentID(const string &studentID);
 
     // first name
     string getFirstName() const;
@@ -52,7 +52,7 @@ public:
     DegreeProgram getDegreeProgram() const;
     void setDegreeProgram(const DegreeProgram &degreeProgram);
 
-    void print();
+    void print() const;
 };
 
 #endif

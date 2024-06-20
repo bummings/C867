@@ -1,5 +1,4 @@
 #include "student.h"
-
 #include <iostream>
 
 // default constructor
@@ -30,6 +29,15 @@ Student::Student(string studentID, string firstName, string lastName, string ema
 }
 
 // getters && setters
+
+// ID
+string Student::getStudentID() const {
+    return studentID;
+}
+
+void Student::setStudentID(const string &studentID) {
+    this->studentID = studentID;
+}
 
 // first name
 string Student::getFirstName() const {
@@ -80,7 +88,7 @@ DegreeProgram Student::getDegreeProgram() const {
 }
 
 // this method helps print out a string for the enum of DegreeType, as it will just return an indice for the value.
-void Student::print() {
+void Student::print() const {
     string degree_string;
     if (degreeProgram == DegreeProgram::SOFTWARE) {
         degree_string = "Software";
@@ -89,5 +97,12 @@ void Student::print() {
     } else if (degreeProgram == DegreeProgram::NETWORK) {
         degree_string = "Network";
     }
-    cout << studentID << endl;
+    cout << "ID: " << studentID << "\t"
+         << "First Name: " << firstName << "\t"
+         << "Last Name: " << lastName << "\t"
+         << "Email: " << emailAddress << "\t"
+         << "Age: " << age << "\t"
+         << "daysInCourse: {" << daysInCourse[0] << ", " << daysInCourse[1] << ", " << daysInCourse[2] << "}\t"
+         << "Degree Program: " << degree_string << endl;
+
 }
