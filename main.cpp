@@ -4,8 +4,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
   DegreeProgram currentProgram = SECURITY;
   cout << "🎾 OK OK 🎾" << endl;
 
@@ -17,24 +16,22 @@ int main()
   cout << "size: " << numStudents << "\n\n";
   cout << "\n\n\n";
 
-  for (int i; i < numStudents; i++)
-  {
+  for (int i; i < numStudents; i++) {
     cout << "ANOTHER ONE";
   }
 
   cout << studentData[1];
 
-  if (currentProgram == SECURITY)
-  {
+  if (currentProgram == SECURITY) {
     cout << "\nSecurity\n";
   }
-  else
-  {
+  else {
     cout << "Who knows man\n";
   };
 
   cout << "Going to attempt to create a Student" << endl;
 
+  // test student
   Student edd;
 
   // you will need to implement the getters and setters on the student object obv.

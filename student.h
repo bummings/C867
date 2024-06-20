@@ -6,8 +6,7 @@
 
 using namespace std;
 
-class Student
-{
+class Student {
 private:
     string studentID;
     string firstName;
@@ -21,7 +20,9 @@ public:
     Student(); // default, no arg
     Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[], DegreeProgram degreeProgram);
 
+    //
     // getters & setters
+    //
 
     // student ID
     string getStudentID() const;
