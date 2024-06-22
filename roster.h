@@ -8,6 +8,7 @@ class Roster  {
         Roster();
         ~Roster();  // destructor
 
+        // declare all methods on Roster class
         void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
         void remove(string studentID);
         void printAll() const;

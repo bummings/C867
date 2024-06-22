@@ -59,5 +59,51 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram) const {
     }
 }
 
-// remaining methods printAverageDaysInCourse, printInvalidEmails, printByDegreeProgram
+/* 
+validate the following for each email address string
+that is evaluated:
+    1. no spaces
+    2. valid domain ending (.com, .net, etc)
+    3. valid characters (a-z, A-Z, 0-9, @, .)
+    4. contains a single @ and at least one . after
+*/
+void Roster::printInvalidEmails() const {
+    for (int i = 0; i <= lastIndex; ++i) {
+        string email = classRosterArray[i]->getEmailAddress();
+
+        // spaces
+        if (email.find(' ') != string::npos) {
+            cout << "Invalid e-mail: " << email << endl;
+            continue;
+        }
+        // valid domain ending (.com, .net)
+        if (email.find(".com") == string::npos && email.find(".net") == string::npos) {
+            cout << "Invalid e-mail: " << email << endl;
+            continue;
+        }
+        // valid characters 
+        bool valid = true;
+        for (char character : email) {
+            if (!isalnum(character) && character != '@' && character != '.' && character != '_') {
+                valid = false;
+                break;
+            }
+        }
+        if (!valid) {
+            cout << "Invalid e-mail: " << email << endl;
+            continue;
+        }
+        // Check for exactly one '@'
+        size_t atPos = email.find('@');
+        if (atPos == string::npos || email.find('@', atPos + 1) != string::npos) {
+            cout << "Invalid e-mail: " << email << endl;
+            continue;
+        }
+        // Check for at least one '.' after '@'
+        if (email.find('.', atPos) == string::npos) {
+            cout << "Invalid e-mail: " << email << endl;
+            continue;
+        }
+    }
+}
 

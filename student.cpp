@@ -29,7 +29,6 @@ Student::Student(string studentID, string firstName, string lastName, string ema
 }
 
 // getters && setters
-
 // ID
 string Student::getStudentID() const {
     return studentID;
@@ -75,6 +74,7 @@ void Student::setAge(const int &age) {
 const int *Student::getDaysInCourse() const {
     return daysInCourse;
 }
+
 // loop over days in course and add to array one by one
 void Student::setDaysInCourse(int daysInCourse[]) {
     for (int i = 0; i < 3; ++i) {
@@ -87,7 +87,7 @@ DegreeProgram Student::getDegreeProgram() const {
     return degreeProgram;
 }
 
-// this method helps print out a string for the enum of DegreeType, as it will just return an indice for the value.
+// this helper method will print out a string for the enum of DegreeType, as without it, we will only have returned an indice for the value, as enums return the value and not the string.
 void Student::print() const {
     string degree_string;
     if (degreeProgram == DegreeProgram::SOFTWARE) {
