@@ -40,5 +40,13 @@ void Roster::printAll() const {
     }
 }
 
+void Roster::printByDegreeProgram(DegreeProgram degreeProgram) const {
+    for (int i = 0; i<= lastIndex; ++i) {
+        if (classRosterArray[i]->getDegreeProgram() == degreeProgram) {
+            classRosterArray[i]->print();
+        }
+    }
+}
+
 // remaining methods printAverageDaysInCourse, printInvalidEmails, printByDegreeProgram
 

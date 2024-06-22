@@ -32,6 +32,9 @@ int main() {
     classRoster.add("A5", "YourFirstName", "YourLastName", "YourEmail@example.com", 37, 1,2,3, DegreeProgram::SOFTWARE);
 
     classRoster.printAll();
+    
+    
+    
 
 
   int numStudents = sizeof(studentData) / sizeof(studentData[0]);
@@ -51,8 +54,12 @@ int main() {
     cout << "Who knows man\n";
   };
 
+  // Print students by degree program
+    cout << "\nPrinting students in the NETWORK degree program:\n";
+    classRoster.printByDegreeProgram(DegreeProgram::NETWORK);
 
-  cout << "\n\nNow creating a Student" << endl;
+
+  cout << "\n\nNow creating a Student" << endl;  
   // test student
   Student edd;
 

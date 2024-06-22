@@ -15,9 +15,13 @@ class Roster  {
         void printInvalidEmails() const;
         void printByDegreeProgram(DegreeProgram degreeProgram) const;
 
+
     private:
-        Student* classRosterArray[5]; // this is an array of pointers to Student objects
-        int lastIndex = -1; // index of last indexed student
+        // this is an array of pointers to Student objects
+        Student* classRosterArray[5]; 
+        
+        // index of last indexed student
+        int lastIndex = -1; 
 };
 
 #endif
