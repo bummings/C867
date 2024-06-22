@@ -16,6 +16,7 @@ class Roster  {
         void printByDegreeProgram(DegreeProgram degreeProgram) const;
 
 
+
     private:
         // this is an array of pointers to Student objects
         Student* classRosterArray[5]; 

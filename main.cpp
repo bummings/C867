@@ -58,6 +58,10 @@ int main() {
     cout << "\nPrinting students in the NETWORK degree program:\n";
     classRoster.printByDegreeProgram(DegreeProgram::NETWORK);
 
+  // average days in course
+  cout << "\nPrinting avg days in course for student A1: \n";
+  classRoster.printAverageDaysInCourse("A1");
+  
 
   cout << "\n\nNow creating a Student" << endl;  
   // test student
