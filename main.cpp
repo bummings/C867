@@ -1,3 +1,5 @@
+// g++ -o main *.cpp && ./main
+
 #include <iostream>
 #include "degree.h"
 #include "student.h"
@@ -23,20 +25,20 @@ int main() {
   cout << "\n\n\n";
 
   for (int i; i < numStudents; i++) {
-    cout << "ANOTHER ONE";
+    cout << "STUDENT CREATED \n";
   }
 
   cout << studentData[1];
 
   if (currentProgram == SECURITY) {
-    cout << "\nSecurity\n";
+    cout << "\n Student in array placement [1] is: Security\n";
   }
   else {
     cout << "Who knows man\n";
   };
 
-  cout << "Going to attempt to create a Student" << endl;
 
+  cout << "\n\nNow creating a Student" << endl;
   // test student
   Student edd;
 
@@ -45,14 +47,13 @@ int main() {
   cout << "Last name: " << edd.getLastName() << endl;
   cout << "Email: " << edd.getEmailAddress() << endl;
 
-  cout << "Modifying name with setter now 🤯 " << endl;
+  cout << "\n\nModifying name with setter now 🤯 " << endl;
 
-  edd.setFirstName("Edd ");
-  edd.setLastName("Bummings");
+  edd.setFirstName("Updated Edd ");
+  edd.setLastName("Updated Bummings");
   edd.setEmailAddress("updatedEmailAddress@lol.com");
 
-  cout << "Updated student 😇 \n\n"
-       << endl;
+  cout << " \nUpdated student: 😇"<< endl;
 
   cout << "First name: " << edd.getFirstName() << endl;
   cout << "Last name: " << edd.getLastName() << endl;
