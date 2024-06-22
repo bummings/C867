@@ -3,6 +3,7 @@
 #include <iostream>
 #include "degree.h"
 #include "student.h"
+#include "roster.h"
 
 using namespace std;
 
@@ -19,6 +20,19 @@ int main() {
     "A4,Graf,Iq,email4@lol.com,57,35,35,60,SECURITY"
     "A5,Itchy,Springer,email5@lol.com,97,85,86,20,SECURITY"
   };
+
+  cout << "Testing now for example class roster and print method: \n\n\n";
+  
+  Roster classRoster;
+
+  classRoster.add("A1", "John", "Smith", "John1989@gmail.com", 20, 30, 35, 40, DegreeProgram::SECURITY);
+    classRoster.add("A2", "Suzan", "Erickson", "Erickson_1990@gmailcom", 19, 50, 30, 40, DegreeProgram::NETWORK);
+    classRoster.add("A3", "Jack", "Napoli", "The_lawyer99yahoo.com", 19, 20, 40, 33, DegreeProgram::SOFTWARE);
+    classRoster.add("A4", "Erin", "Black", "Erin.black@comcast.net", 22, 50, 58, 40, DegreeProgram::SECURITY);
+    classRoster.add("A5", "YourFirstName", "YourLastName", "YourEmail@example.com", 37, 1,2,3, DegreeProgram::SOFTWARE);
+
+    classRoster.printAll();
+
 
   int numStudents = sizeof(studentData) / sizeof(studentData[0]);
   cout << "size: " << numStudents << "\n\n";
