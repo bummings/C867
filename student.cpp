@@ -14,8 +14,7 @@ Student::Student() {
     this->degreeProgram = DegreeProgram::SOFTWARE;
 }
 
-Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[3],
-                 DegreeProgram degreeProgram) {
+Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[3], DegreeProgram degreeProgram) {
     this->studentID = studentID;
     this->firstName = firstName;
     this->lastName = lastName;
@@ -98,11 +97,11 @@ void Student::print() const {
         degree_string = "Network";
     }
     cout << "ID: " << studentID << "\t"
-         << "First Name: " << firstName << "\t"
-         << "Last Name: " << lastName << "\t"
-         << "Email: " << emailAddress << "\t"
-         << "Age: " << age << "\t"
-         << "daysInCourse: {" << daysInCourse[0] << ", " << daysInCourse[1] << ", " << daysInCourse[2] << "}\t"
+         << "First Name: " << firstName <<"   "
+         << "Last Name: " << lastName << "  "
+         << "Email: " << emailAddress << "  "
+         << "Age: " << age << "  "
+         << "daysInCourse: {" << daysInCourse[0] << ", " << daysInCourse[1] << ", " << daysInCourse[2] << "}  "
          << "Degree Program: " << degree_string << endl;
 
 }

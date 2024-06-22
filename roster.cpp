@@ -40,22 +40,11 @@ void Roster::printAll() const {
     }
 }
 
-void Roster::printAverageDaysInCourse(string studentID) const {
-   for (int i = 0; i <= lastIndex; ++i) {
-        if (classRosterArray[i]->getStudentID() == studentID) {
-            const int* days = classRosterArray[i]->getDaysInCourse();
-            double average = (days[0] + days[1] + days[2] / 3.0);
-            cout << "Student ID: " << studentID << ", avg. days in course: " << average << endl;
-            return; 
-        }
-   } 
-}
-
-void Roster::printByDegreeProgram(DegreeProgram degreeProgram) const {
-    for (int i = 0; i<= lastIndex; ++i) {
-        if (classRosterArray[i]->getDegreeProgram() == degreeProgram) {
-            classRosterArray[i]->print();
-        }
+void Roster::printAverageDaysInCourse() const {
+    for (int i = 0; i <= lastIndex; ++i) {
+        const int* days = classRosterArray[i]->getDaysInCourse();
+        double average = (days[0] + days[1] + days[2]) / 3.0;
+        cout << "Student ID: " << classRosterArray[i]->getStudentID() << ", Average days in course: " << average << endl;
     }
 }
 
@@ -106,4 +95,14 @@ void Roster::printInvalidEmails() const {
         }
     }
 }
+
+void Roster::printByDegreeProgram(DegreeProgram degreeProgram) const {
+    for (int i = 0; i<= lastIndex; ++i) {
+        if (classRosterArray[i]->getDegreeProgram() == degreeProgram) {
+            classRosterArray[i]->print();
+        }
+    }
+}
+
+
 
