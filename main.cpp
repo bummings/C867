@@ -9,8 +9,9 @@ using namespace std;
 
 int main() {
   
-  cout << "C867: Scripting and Programming: Applications" << endl;
-  cout << "Student ID: 010752490 \nName: Edd Burke\n\n" << endl;
+  cout << "C867: Scripting and Programming: Applications (C++)" << endl;
+  cout << "Student ID: 010752490" << endl; 
+  cout << "Name: Edd Burke \n\n" << endl;
 
   // instantiate Roster object
   Roster classRoster;
