@@ -20,10 +20,9 @@ public:
     Student(); // default, no arg
     Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse[], DegreeProgram degreeProgram);
 
-    //
+    
     // getters & setters
-    //
-
+    
     // student ID
     string getStudentID() const;
     void setStudentID(const string &studentID);
